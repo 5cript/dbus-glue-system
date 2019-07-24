@@ -33,7 +33,7 @@ namespace BlueZ::org::bluez::hci
 		DBusMock::readable <std::string> Modalias;
 
 	public: // Signals
-	);
+	};
 
 	class GattManager
 	{
@@ -47,7 +47,7 @@ namespace BlueZ::org::bluez::hci
 	public: // Properties
 
 	public: // Signals
-	);
+	};
 
 	class LEAdvertisingManager
 	{
@@ -64,7 +64,7 @@ namespace BlueZ::org::bluez::hci
 		DBusMock::readable <std::string> SupportedIncludes;
 
 	public: // Signals
-	);
+	};
 
 	class Media
 	{
@@ -80,7 +80,7 @@ namespace BlueZ::org::bluez::hci
 	public: // Properties
 
 	public: // Signals
-	);
+	};
 
 	class NetworkServer
 	{
@@ -94,7 +94,7 @@ namespace BlueZ::org::bluez::hci
 	public: // Properties
 
 	public: // Signals
-	);
+	};
 
 }
 

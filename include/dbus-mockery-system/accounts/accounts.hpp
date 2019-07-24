@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdint>
 
+// https://docs.pagure.org/SSSD.sssd/design_pages/accounts_service.html
 namespace Accounts::org::freedesktop::Accounts
 {
     class Peer
@@ -17,7 +18,7 @@ namespace Accounts::org::freedesktop::Accounts
 	public: // Properties
 
 	public: // Signals
-	);
+	};
 
 	class Accounts
 	{
@@ -42,13 +43,13 @@ namespace Accounts::org::freedesktop::Accounts
 	public: // Signals
 		using UserAdded = void(DBusMock::object_path const& /*user*/);
 		using UserDeleted = void(DBusMock::object_path const& /*user*/);
-	);
+	};
 }
 
 
 DBUS_MOCK_NAMESPACE
 (
-    (Accounts)(org)(freedesktop)(Accounts)
+    (Accounts)(org)(freedesktop)(Accounts),
     Peer,
     DBUS_MOCK_METHODS(Ping, GetMachineId),
     DBUS_MOCK_NO_PROPERTIES,
@@ -57,7 +58,7 @@ DBUS_MOCK_NAMESPACE
 
 DBUS_MOCK_NAMESPACE
 (
-    (Accounts)(org)(freedesktop)(Accounts)
+    (Accounts)(org)(freedesktop)(Accounts),
     Accounts,
     DBUS_MOCK_METHODS(ListCachedUsers, FindUserById, FindUserByName, CreateUser, CacheUser, UncacheUser, DeleteUser),
     DBUS_MOCK_PROPERTIES(DaemonVersion, HasNoUsers, HasMultipleUsers, AutomaticLoginUsers),

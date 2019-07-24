@@ -17,7 +17,7 @@ namespace BlueZ::org::bluez
 	public: // Properties
 
 	public: // Signals
-	);
+	};
 
 	class ProfileManager
 	{
@@ -31,7 +31,7 @@ namespace BlueZ::org::bluez
 	public: // Properties
 
 	public: // Signals
-	);
+	};
 }
 
 DBUS_MOCK_NAMESPACE
