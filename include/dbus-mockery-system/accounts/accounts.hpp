@@ -41,8 +41,8 @@ namespace Accounts::org::freedesktop::Accounts
 		DBusMock::readable <DBusMock::object_path> AutomaticLoginUsers;
 
 	public: // Signals
-		using UserAdded = void(DBusMock::object_path const& /*user*/);
-		using UserDeleted = void(DBusMock::object_path const& /*user*/);
+		signal <void(DBusMock::object_path const& /*user*/)> UserAdded;
+		signal <void(DBusMock::object_path const& /*user*/)> UserDeleted;
 	};
 }
 
