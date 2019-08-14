@@ -1,3 +1,5 @@
+#pragma once
+
 #include <dbus-mockery/dbus_interface.hpp>
 
 #include <string>

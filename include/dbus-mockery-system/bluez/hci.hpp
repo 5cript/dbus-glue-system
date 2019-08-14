@@ -1,3 +1,5 @@
+#pragma once
+
 #include <dbus-mockery/dbus_interface.hpp>
 
 #include <string>
@@ -100,7 +102,7 @@ namespace BlueZ::org::bluez::hci
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)(hci)
+    (BlueZ)(org)(bluez)(hci),
     Adapter,
     DBUS_MOCK_METHODS(StartDiscovery, SetDiscoveryFilter, StopDiscovery, RemoveDevice, GetDiscoveryFilters),
     DBUS_MOCK_PROPERTIES(Address, AddressType, Name, Alias, Class, Powered, Discoverable, DiscoverableTimeout, Pairable, PairableTimeout, Discovering, UUIDs, Modalias),
@@ -109,7 +111,7 @@ DBUS_MOCK_NAMESPACE
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)(hci)
+    (BlueZ)(org)(bluez)(hci),
     GattManager,
     DBUS_MOCK_METHODS(RegisterApplication, UnregisterApplication),
     DBUS_MOCK_NO_PROPERTIES,
@@ -118,7 +120,7 @@ DBUS_MOCK_NAMESPACE
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)(hci)
+    (BlueZ)(org)(bluez)(hci),
     LEAdvertisingManager,
     DBUS_MOCK_METHODS(RegisterAdvertisement, UnregisterAdvertisement),
     DBUS_MOCK_PROPERTIES(ActiveInstances, SupportedInstances, SupportedIncludes),
@@ -127,7 +129,7 @@ DBUS_MOCK_NAMESPACE
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)(hci)
+    (BlueZ)(org)(bluez)(hci),
     Media,
     DBUS_MOCK_METHODS(RegisterEndpoint, UnregisterEndpoint, RegisterPlayer, UnregisterPlayer),
     DBUS_MOCK_NO_PROPERTIES,
@@ -136,7 +138,7 @@ DBUS_MOCK_NAMESPACE
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)(hci)
+    (BlueZ)(org)(bluez)(hci),
     NetworkServer,
     DBUS_MOCK_METHODS(Register, Unregister),
     DBUS_MOCK_NO_PROPERTIES,

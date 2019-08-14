@@ -1,3 +1,5 @@
+#pragma once
+
 #include <dbus-mockery/dbus_interface.hpp>
 
 #include <string>
@@ -36,7 +38,7 @@ namespace BlueZ::org::bluez
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)
+    (BlueZ)(org)(bluez),
     AgentManager,
     DBUS_MOCK_METHODS(RegisterAgent, UnregisterAgent, RequestDefaultAgent),
     DBUS_MOCK_NO_PROPERTIES,
@@ -45,7 +47,7 @@ DBUS_MOCK_NAMESPACE
 
 DBUS_MOCK_NAMESPACE
 (
-    (BlueZ)(org)(bluez)
+    (BlueZ)(org)(bluez),
     ProfileManager,
     DBUS_MOCK_METHODS(RegisterProfile, UnregisterProfile),
     DBUS_MOCK_NO_PROPERTIES,
