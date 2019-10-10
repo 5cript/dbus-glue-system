@@ -27,7 +27,7 @@ namespace BlueZ::org::bluez
 		virtual ~ProfileManager() = default;
 
 	public: // Methods
-		virtual auto RegisterProfile(DBusMock::object_path const& profile, std::string const& UUID, std::unordered_map <std::string, std::string> const& options) -> void = 0;
+		virtual auto RegisterProfile(DBusMock::object_path const& profile, std::string const& UUID, std::unordered_map <std::string, DBusMock::variant> const& options) -> void = 0;
 		virtual auto UnregisterProfile(DBusMock::object_path const& profile) -> void = 0;
 
 	public: // Properties
