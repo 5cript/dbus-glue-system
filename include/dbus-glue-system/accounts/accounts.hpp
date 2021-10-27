@@ -8,7 +8,7 @@
 // https://docs.pagure.org/SSSD.sssd/design_pages/accounts_service.html
 namespace Accounts::org::freedesktop::Accounts
 {
-    class Peer
+  class Peer
 	{
 	public:
 		virtual ~Peer() = default;
@@ -43,8 +43,8 @@ namespace Accounts::org::freedesktop::Accounts
 		DBusGlue::readable <DBusGlue::object_path> AutomaticLoginUsers;
 
 	public: // Signals
-		signal <void(DBusGlue::object_path const& /*user*/)> UserAdded;
-		signal <void(DBusGlue::object_path const& /*user*/)> UserDeleted;
+		DBusGlue::signal <void(DBusGlue::object_path const& /*user*/)> UserAdded;
+		DBusGlue::signal <void(DBusGlue::object_path const& /*user*/)> UserDeleted;
 	};
 }
 

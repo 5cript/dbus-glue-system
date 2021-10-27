@@ -6,7 +6,7 @@
 
 namespace BlueZ::org::bluez
 {
-    class AgentManager
+  class AgentManager
 	{
 	public:
 		virtual ~AgentManager() = default;

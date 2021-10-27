@@ -4,7 +4,7 @@
 
 namespace BlueZ::org::bluez::hci::dev
 {
-    class Device
+  class Device
 	{
 	public:
 		virtual ~Device() = default;

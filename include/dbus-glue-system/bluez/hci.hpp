@@ -7,7 +7,7 @@
 
 namespace BlueZ::org::bluez::hci
 {
-    class Adapter
+  class Adapter
 	{
 	public:
 		virtual ~Adapter() = default;

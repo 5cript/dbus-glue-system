@@ -4,7 +4,7 @@
 
 namespace DBus::org::freedesktop::DBus
 {
-    class ObjectManager
+  class ObjectManager
 	{
 	public:
 		virtual ~ObjectManager() = default;
