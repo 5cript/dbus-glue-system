@@ -11,24 +11,24 @@ namespace DBus::org::freedesktop::DBus
 
 	public: // Methods
 		virtual auto GetManagedObjects() -> std::unordered_map <
-		    DBusMock::object_path,
+		    DBusGlue::object_path,
 		    std::unordered_map <
 		        std::string,
-		        std::unordered_map <std::string, DBusMock::variant>
+		        std::unordered_map <std::string, DBusGlue::variant>
 		    >
 		> = 0;
 
 	public: // Properties
 
 	public: // Signals
-		DBusMock::signal <
+		DBusGlue::signal <
 		    void
 		    (
-		        DBusMock::object_path,
-		        std::unordered_map <std::string, std::unordered_map <std::string, DBusMock::variant>>
+		        DBusGlue::object_path,
+		        std::unordered_map <std::string, std::unordered_map <std::string, DBusGlue::variant>>
 		    )
 		> InterfacesAdded;
-		DBusMock::signal <void(DBusMock::object_path, std::vector <std::string>)> InterfacesRemoved;
+		DBusGlue::signal <void(DBusGlue::object_path, std::vector <std::string>)> InterfacesRemoved;
 	};
 
 	class Introspectable
@@ -44,20 +44,20 @@ namespace DBus::org::freedesktop::DBus
 	};
 }
 
-DBUS_MOCK_NAMESPACE
+DBUS_DECLARE_NAMESPACE
 (
     (DBus)(org)(freedesktop)(DBus),
     Introspectable,
-    DBUS_MOCK_METHODS(Introspect),
-    DBUS_MOCK_NO_PROPERTIES,
-    DBUS_MOCK_NO_SIGNALS
+    DBUS_DECLARE_METHODS(Introspect),
+    DBUS_DECLARE_NO_PROPERTIES,
+    DBUS_DECLARE_NO_SIGNALS
 )
 
-DBUS_MOCK_NAMESPACE
+DBUS_DECLARE_NAMESPACE
 (
     (DBus)(org)(freedesktop)(DBus),
     ObjectManager,
-    DBUS_MOCK_METHODS(GetManagedObjects),
-    DBUS_MOCK_NO_PROPERTIES,
-    DBUS_MOCK_SIGNALS(InterfacesAdded, InterfacesRemoved)
+    DBUS_DECLARE_METHODS(GetManagedObjects),
+    DBUS_DECLARE_NO_PROPERTIES,
+    DBUS_DECLARE_SIGNALS(InterfacesAdded, InterfacesRemoved)
 )

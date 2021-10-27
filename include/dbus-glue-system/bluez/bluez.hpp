@@ -12,9 +12,9 @@ namespace BlueZ::org::bluez
 		virtual ~AgentManager() = default;
 
 	public: // Methods
-		virtual auto RegisterAgent(DBusMock::object_path const& agent, std::string const& capability) -> void = 0;
-		virtual auto UnregisterAgent(DBusMock::object_path const& agent) -> void = 0;
-		virtual auto RequestDefaultAgent(DBusMock::object_path const& agent) -> void = 0;
+		virtual auto RegisterAgent(DBusGlue::object_path const& agent, std::string const& capability) -> void = 0;
+		virtual auto UnregisterAgent(DBusGlue::object_path const& agent) -> void = 0;
+		virtual auto RequestDefaultAgent(DBusGlue::object_path const& agent) -> void = 0;
 
 	public: // Properties
 
@@ -27,8 +27,8 @@ namespace BlueZ::org::bluez
 		virtual ~ProfileManager() = default;
 
 	public: // Methods
-		virtual auto RegisterProfile(DBusMock::object_path const& profile, std::string const& UUID, std::unordered_map <std::string, DBusMock::variant> const& options) -> void = 0;
-		virtual auto UnregisterProfile(DBusMock::object_path const& profile) -> void = 0;
+		virtual auto RegisterProfile(DBusGlue::object_path const& profile, std::string const& UUID, std::unordered_map <std::string, DBusGlue::variant> const& options) -> void = 0;
+		virtual auto UnregisterProfile(DBusGlue::object_path const& profile) -> void = 0;
 
 	public: // Properties
 
@@ -36,20 +36,20 @@ namespace BlueZ::org::bluez
 	};
 }
 
-DBUS_MOCK_NAMESPACE
+DBUS_DECLARE_NAMESPACE
 (
     (BlueZ)(org)(bluez),
     AgentManager,
-    DBUS_MOCK_METHODS(RegisterAgent, UnregisterAgent, RequestDefaultAgent),
-    DBUS_MOCK_NO_PROPERTIES,
-    DBUS_MOCK_NO_SIGNALS
+    DBUS_DECLARE_METHODS(RegisterAgent, UnregisterAgent, RequestDefaultAgent),
+    DBUS_DECLARE_NO_PROPERTIES,
+    DBUS_DECLARE_NO_SIGNALS
 )
 
-DBUS_MOCK_NAMESPACE
+DBUS_DECLARE_NAMESPACE
 (
     (BlueZ)(org)(bluez),
     ProfileManager,
-    DBUS_MOCK_METHODS(RegisterProfile, UnregisterProfile),
-    DBUS_MOCK_NO_PROPERTIES,
-    DBUS_MOCK_NO_SIGNALS
+    DBUS_DECLARE_METHODS(RegisterProfile, UnregisterProfile),
+    DBUS_DECLARE_NO_PROPERTIES,
+    DBUS_DECLARE_NO_SIGNALS
 )
