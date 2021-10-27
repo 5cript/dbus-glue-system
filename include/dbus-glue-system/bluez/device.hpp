@@ -1,6 +1,6 @@
 #pragma once
 
-#include <dbus-mockery/dbus_interface.hpp>
+#include <dbus-glue/dbus_interface.hpp>
 
 namespace BlueZ::org::bluez::hci::dev
 {
